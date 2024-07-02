@@ -8,34 +8,56 @@
         body {
             background-color: antiquewhite;
             font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .header {
+            background-color: red;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
             text-align: center;
-            font-size: 64px;
-            color: red;
+            position: relative;
         }
-        .header img {
-            width: 1280px;
-            height: 400px;
+        .header img.logo {
+            width: 100px;
+            height: auto;
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
-        nav {
-            text-align: center;
-            font-size: 32px;
-            color: red;
-            margin: 20px 0;
+        .header img.banner {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin-top: 20px;
         }
-        nav ul {
+        .nav {
+            background-color: #333;
+            width: 100%;
             display: flex;
             justify-content: center;
-            padding: 0;
-            list-style: none;
+            padding: 10px 0;
         }
-        nav ul li {
-            margin-right: 40px;
-        }
-        .menu-container {
+        .nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
             text-align: center;
-            margin: 20px;
+        }
+        .nav a:hover {
+            background-color: darkred;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin-top: 20px;
+            text-align: center;
         }
         .menu-container ul {
             display: flex;
@@ -43,15 +65,17 @@
             justify-content: center;
             padding: 0;
         }
-        .menu-container ul label {
-            margin-right: 32px;
+        .menu-container ul li {
+            margin: 20px;
         }
         input[type="text"], input[type="button"], select {
             font-size: 20px;
             padding: 10px;
+            margin-top: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            width: 100%;
         }
         input[type="button"] {
             background-color: red;
@@ -59,7 +83,7 @@
             cursor: pointer;
         }
         input[type="button"]:hover {
-            background-color: darkred;
+            background-color: rgb(244, 66, 66);
         }
         select {
             font-size: 20px;
@@ -69,47 +93,50 @@
 </head>
 <body>
     <header class="header">
-        PIZZAHUT
-        <img src="https://theawesomedaily.com/wp-content/uploads/2016/09/pictures-of-pizza-23-1.jpg" alt="This is an example pizza">
+        <img src="https://www.theexaminernews.com/examiner-news/wp-content/uploads/2012/01/Pizza_Hut.png" alt="Pizza Hut Logo" class="logo">
+        <h1>PIZZAHUT</h1>
+        <img src="https://theawesomedaily.com/wp-content/uploads/2016/09/pictures-of-pizza-23-1.jpg" alt="This is an example pizza" class="banner">
     </header>
-    <nav>
-        <ul>
-            <li><a href="https://paw800.github.io/Home/">Home</a></li>
-            <li><a href="https://paw800.github.io/Menu/">Menu</a></li>
-            <li><a href="https://uae.pizzahut.me/en/login">Account</a></li>
-            <li><a href="https://uae.pizzahut.me/en/order-history">Order</a></li>
-            <li><a href="https://uae.pizzahut.me/en/contactUs">Service</a></li>
-        </ul>
+
+    <nav class="nav">
+        <a href="https://paw800.github.io/Home/">Home</a>
+        <a href="https://paw800.github.io/Menu/">Menu</a>
+        <a href="https://paw800.github.io/Account/">Account</a>
+        <a href="https://paw800.github.io/Order/">Order</a>
+        <a href="https://uae.pizzahut.me/en/contactUs">Service</a>
     </nav>
-    <div class="menu-container">
-        <ul>
-            <li>
-                <label for="menu">Menu
-                    <a href="https://paw800.github.io/Menu/">
-                        <input type="button" id="menu" value="Menu button">
-                    </a>
-                </label>
-            </li>
-            <li>
-                <label for="pizza">Pizza
-                    <select id="pizza">
-                        <option value="Mr.Six honey burger">Mr.Six honey burger</option>
-                        <option value="Chorizo">Chorizo</option>
-                        <option value="Fruit pizza">Fruit pizza</option>
-                        <option value="Durian pizza with cheese and gold pillow">Durian pizza</option>
-                        <option value="Orleans roast chicken pizza">Orleans roast chicken pizza</option>
-                        <option value="South American shrimp pizza">South American shrimp pizza</option>
-                        <option value="lasagna">Lasagna</option>
-                        <option value="pepsi">Pepsi</option>
-                    </select>
-                </label>
-            </li>
-            <li>
-                <label for="address">Address
-                    <input type="text" id="address">
-                </label>
-            </li>
-        </ul>
+
+    <div class="container">
+        <div class="menu-container">
+            <ul>
+                <li>
+                    <label for="menu">Menu
+                        <a href="https://paw800.github.io/Menu/">
+                            <input type="button" id="menu" value="Menu button">
+                        </a>
+                    </label>
+                </li>
+                <li>
+                    <label for="pizza">Pizza
+                        <select id="pizza">
+                            <option value="Mr.Six honey burger">Mr.Six honey burger</option>
+                            <option value="Chorizo">Chorizo</option>
+                            <option value="Fruit pizza">Fruit pizza</option>
+                            <option value="Durian pizza with cheese and gold pillow">Durian pizza</option>
+                            <option value="Orleans roast chicken pizza">Orleans roast chicken pizza</option>
+                            <option value="South American shrimp pizza">South American shrimp pizza</option>
+                            <option value="lasagna">Lasagna</option>
+                            <option value="pepsi">Pepsi</option>
+                        </select>
+                    </label>
+                </li>
+                <li>
+                    <label for="address">Address
+                        <input type="text" id="address">
+                    </label>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
