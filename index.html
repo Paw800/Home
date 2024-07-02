@@ -1,44 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<div style="background-color: antiquewhite;">    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PIZZA</title>
-        <div style="font-size: 64px;text-align: center;color: red;">
-        PIZZAHUT<img src="https://theawesomedaily.com/wp-content/uploads/2016/09/pictures-of-pizza-23-1.jpg" alt="this is an example pizza" width="1280px" height="400px">    
-        </div>
-    </head>
-    <body>
-        <div style="text-align: center;">
-            <div style="font-size: 32px; color: red; margin: auto; display: flex; justify-content: center;">
-                <ul style="display: flex; padding: 0; list-style: none;">
-                    <li style="margin-right: 40px;"><a href="https://paw800.github.io/Home/">Home</a></li>
-                    <li style="margin-right: 40px;"><a href="https://paw800.github.io/Menu/">Menu</a></li>
-                    <li style="margin-right: 40px;"><a href="https://uae.pizzahut.me/en/login">Account</a></li>
-                    <li style="margin-right: 40px;"><a href="https://uae.pizzahut.me/en/order-history">Order</a></li>
-                    <li style="margin-right: 40px;"><a href="https://uae.pizzahut.me/en/contactUs">Service</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        
-        <div>
-            <ul style="display: flex;list-style: none;">
-                <label for="menu" style="margin-right: 32px;">menu<a href="https://paw800.github.io/Menu/"><input type="button" id="menu" value="Menu button"></a></label>
-                <label for="pizza" style="margin-right: 32px;">pizza<select><option value="Mr.Six honey burger">Mr.Six honey burger</option>
-                    <option value="Chorizo">Chorizo</option>
-                    <option value="Fruit pizza">Fruit pizza</option>
-                    <option value="Durian pizza with cheese and gold pillow">Durian pizza</option>
-                    <option value="Orleans roast chicken pizza">Orleans roast chicken pizza</option>
-                    <option value="South American shrimp pizza">South American shrimp pizza</option>
-                    <option value="lasagna">lasagna</option>
-                    <option value="pepsi">pepsi</option>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            font-size: 64px;
+            color: red;
+        }
+        .header img {
+            width: 1280px;
+            height: 400px;
+        }
+        nav {
+            text-align: center;
+            font-size: 32px;
+            color: red;
+            margin: 20px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            margin-right: 40px;
+        }
+        .menu-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .menu-container ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding: 0;
+        }
+        .menu-container ul label {
+            margin-right: 32px;
+        }
+        input[type="text"], input[type="button"], select {
+            font-size: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="button"] {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: darkred;
+        }
+        select {
+            font-size: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        PIZZAHUT
+        <img src="https://theawesomedaily.com/wp-content/uploads/2016/09/pictures-of-pizza-23-1.jpg" alt="This is an example pizza">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://paw800.github.io/Home/">Home</a></li>
+            <li><a href="https://paw800.github.io/Menu/">Menu</a></li>
+            <li><a href="https://uae.pizzahut.me/en/login">Account</a></li>
+            <li><a href="https://uae.pizzahut.me/en/order-history">Order</a></li>
+            <li><a href="https://uae.pizzahut.me/en/contactUs">Service</a></li>
+        </ul>
+    </nav>
+    <div class="menu-container">
+        <ul>
+            <li>
+                <label for="menu">Menu
+                    <a href="https://paw800.github.io/Pizza/">
+                        <input type="button" id="menu" value="Menu button">
+                    </a>
+                </label>
+            </li>
+            <li>
+                <label for="pizza">Pizza
+                    <select id="pizza">
+                        <option value="Mr.Six honey burger">Mr.Six honey burger</option>
+                        <option value="Chorizo">Chorizo</option>
+                        <option value="Fruit pizza">Fruit pizza</option>
+                        <option value="Durian pizza with cheese and gold pillow">Durian pizza</option>
+                        <option value="Orleans roast chicken pizza">Orleans roast chicken pizza</option>
+                        <option value="South American shrimp pizza">South American shrimp pizza</option>
+                        <option value="lasagna">Lasagna</option>
+                        <option value="pepsi">Pepsi</option>
                     </select>
-            </label>
-            <dz style="margin-right: 32px;">address<input type="text"></dz>
-            </ul>
-        </div>
-    </body>
-</div>
+                </label>
+            </li>
+            <li>
+                <label for="address">Address
+                    <input type="text" id="address">
+                </label>
+            </li>
+        </ul>
+    </div>
+</body>
 </html>
